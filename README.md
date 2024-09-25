@@ -6,10 +6,11 @@ This calculator is written in C using only the stdio.h header.
 
 As of this version, current features are as follows:
 
-- Addition of Integers
-- Subtraction of Integers
-- Multiplication of Integers
-- Division of Integers (Integer result)
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Exponentiation
 
 
 ## Usage Examples
@@ -20,7 +21,7 @@ The compiled program can be run from the cwd as follows:
 $ ./calculator 
 Enter two numbers:
 $ 4,4
-Now enter the operation (+,-,*,/): 
+Now enter the operation (+,-,*,/,^ (exponentiation)): 
 $ +
 4 + 4 = 8
 ```
@@ -33,10 +34,11 @@ As only C source code is supplied, a compiler is necessary.
 
 ## Planned Changes:
 - Ability to reuse the output in a new computation
-- Implementation of Exponentiation
-- Allow non integer results
+- Rework input method to only require one line of user input
 
 ## Changelog
+- Added ability for values to be non-integers
+- Implemented Exponentiation as repeated multiplication
 - Added a function which controls the output of results
 - Added a function which controls the computation
 - Added Multiplication and Division functions
