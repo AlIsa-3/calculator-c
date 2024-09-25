@@ -32,7 +32,6 @@ $ +
 As only C source code is supplied, a compiler is necessary.
 
 ## Planned Changes:
-- Function to display results
 - Ability to reuse the output in a new computation
 - Implementation of Exponentiation
 - Allow non integer results
