@@ -14,12 +14,14 @@ As of this version, current features are as follows:
 
 The compiled program can be run from the cwd as follows:
 
+```
 $ ./calculator 
 Enter two numbers:
 $ 4,4
 Now enter the operation (+,-): 
 $ +
 4 + 4 = 8
+```
 
 
 
