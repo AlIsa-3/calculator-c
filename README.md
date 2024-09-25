@@ -29,9 +29,13 @@ $ +
 
 As only C source code is supplied, a compiler is necessary.
 
-## Changelog
-
-Planned Changes:
+## Planned Changes:
 - Implementation of Multiplication and Division
 - Ability to reuse the output in a new computation
 - Implementation of Exponentiation
+
+## Changelog
+- Created repo
+
+
+
