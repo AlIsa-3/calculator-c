@@ -19,10 +19,9 @@ The compiled program can be run from the cwd as follows:
 
 ```
 $ ./calculator 
-Enter two numbers:
-$ 4,4
-Now enter the operation (+,-,*,/,^ (exponentiation)): 
-$ +
+Enter your Expression: 
+Operations are (+,-,*,/,^ (exponentiation)) 
+$ 4+4
 4 + 4 = 8
 ```
 
@@ -34,9 +33,12 @@ As only C source code is supplied, a compiler is necessary.
 
 ## Planned Changes:
 - Ability to reuse the output in a new computation
-- Rework input method to only require one line of user input
+
 
 ## Changelog
+- Input can now be done on one line
+- Combined inputs into a struct
+- Fixed error in calculation function causing calculations to not work as intended
 - Added ability for values to be non-integers
 - Implemented Exponentiation as repeated multiplication
 - Added a function which controls the output of results
