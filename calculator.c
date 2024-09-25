@@ -1,26 +1,29 @@
 #include <stdio.h>
 
-int addition(int first_number, int second_number);
-int subtraction(int first_number, int second_number);
-int multiplication(int first_number, int second_number);
-int division(int first_number, int second_number);
-void display_answer(int result, int first_number, int second_number, char operation);
-int calculation(int first_number, int second_number, char operation);
+
+// Calculation Functions
+double addition(double first_number, double second_number);
+double subtraction(double first_number, double second_number);
+double multiplication(double first_number, double second_number);
+double division(double first_number, double second_number);
+double exponentiation(double base, double exponent);
+
+
+void display_answer(double result, double first_number, double second_number, char operation);
+double calculation(double first_number, double second_number, char operation);
 
 int main(void){
 
-    int first_number;
-    int second_number;
+    double first_number;
+    double second_number;
     char operation;
-    int result;
+    double result;
 
     printf("Enter two numbers: \n");
-    scanf(" %i,%i",&first_number,&second_number);
+    scanf(" %lf,%lf",&first_number,&second_number);
 
-
-    printf("Now enter the operation (+,-,*,/): \n");
+    printf("Now enter the operation (+,-,*,/,^ (exponentiation)): \n");
     scanf(" %c",&operation);
-
 
     result = calculation(first_number,second_number,operation);
 
@@ -28,19 +31,19 @@ int main(void){
 
 }
 
-int addition(int first_number,int second_number){
+double addition(double first_number,double second_number){
     return first_number + second_number;
 }
 
-int subtraction(int first_number, int second_number){
+double subtraction(double first_number, double second_number){
     return first_number - second_number;
 }
 
-int multiplication(int first_number, int second_number){
+double multiplication(double first_number, double second_number){
     return first_number * second_number;
 }
 
-int division(int first_number, int second_number){
+double division(double first_number, double second_number){
     if (second_number == 0){
         return 0;
     }
@@ -49,8 +52,22 @@ int division(int first_number, int second_number){
     }
 }
 
-int calculation(int first_number, int second_number, char operation){
-    int result;
+double exponentiation(double base, double exponent){
+
+    double result = 1;
+
+    // Exponentiation is repeated multiplication
+
+    for(int i=exponent;i>0;i--){
+        result *= base;
+    }
+    return result;
+}
+
+
+
+double calculation(double first_number, double second_number, char operation){
+    double result;
     switch (operation){
         case '+':
             result = addition(first_number,second_number);
@@ -64,6 +81,8 @@ int calculation(int first_number, int second_number, char operation){
         case '/':
             result = division(first_number,second_number);
             break;
+        case '^':
+            result = exponentiation(first_number,second_number);
         default:
             printf("Invalid Operation");
             return 0;
@@ -72,20 +91,22 @@ int calculation(int first_number, int second_number, char operation){
 }
 }
 
-void display_answer(int result, int first_number, int second_number, char operation){
+void display_answer(double result, double first_number, double second_number, char operation){
     switch (operation){
         case '+':
-            printf("%i + %i = %i",first_number,second_number,result);
+            printf("%lf + %lf = %lf",first_number,second_number,result);
             break;
         case '-':
-            printf("%i - %i = %i",first_number,second_number,result);
+            printf("%lf - %lf = %lf",first_number,second_number,result);
             break;
         case '*':
-            printf("%i x %i = %i",first_number,second_number,result);
+            printf("%lf x %lf = %lf",first_number,second_number,result);
             break;
         case '/':
-            printf("%i / %i = %i", first_number, second_number, result);
+            printf("%lf / %lf = %lf", first_number, second_number, result);
             break;
+        case '^': 
+            printf("%lf ^ %lf = %lf", first_number,second_number,result);
         default:
             printf("Invalid Operation");
 }
