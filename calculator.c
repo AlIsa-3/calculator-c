@@ -81,7 +81,6 @@ void display_answer(int result, int first_number, int second_number, char operat
             printf("%i - %i = %i",first_number,second_number,result);
             break;
         case '*':
-            result = multiplication(first_number,second_number);
             printf("%i x %i = %i",first_number,second_number,result);
             break;
         case '/':
