@@ -30,11 +30,13 @@ $ +
 As only C source code is supplied, a compiler is necessary.
 
 ## Planned Changes:
+- Function to display results
 - Implementation of Multiplication and Division
 - Ability to reuse the output in a new computation
 - Implementation of Exponentiation
 
 ## Changelog
+- calculator.c now uses 'addition' and 'subtraction' functions as opposed to one-time use code
 - Created repo
 
 
