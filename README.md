@@ -32,12 +32,13 @@ $ 4+4
 As only C source code is supplied, a compiler is necessary.
 
 ## Planned Changes:
-- Support for negative exponents
-- Ability to reuse the output in a new computation
 - Display integers as integers rather than floats
+- May change repeat function
 
 
 ## Changelog
+- Can now continue calculations, albeit in a tedious way
+- Implemented support for negative exponents
 - Fixed result output (now exponentiation shouldn't result in an 'Invalid Operation' flag)
 - Input can now be done on one line
 - Combined inputs into a struct
