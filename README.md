@@ -33,9 +33,11 @@ As only C source code is supplied, a compiler is necessary.
 
 ## Planned Changes:
 - Ability to reuse the output in a new computation
+- Display integers as integers rather than floats
 
 
 ## Changelog
+- Fixed result output (now exponentiation shouldn't result in an 'Invalid Operation' flag)
 - Input can now be done on one line
 - Combined inputs into a struct
 - Fixed error in calculation function causing calculations to not work as intended
