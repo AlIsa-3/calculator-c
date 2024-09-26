@@ -32,6 +32,7 @@ $ 4+4
 As only C source code is supplied, a compiler is necessary.
 
 ## Planned Changes:
+- Support for negative exponents
 - Ability to reuse the output in a new computation
 - Display integers as integers rather than floats
 
