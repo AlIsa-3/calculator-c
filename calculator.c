@@ -111,6 +111,7 @@ double exponentiation(double base, double exponent){
         result *= base;
     }
 
+    // If negative exponent, result is reciprocal of result with a positive exponent
     if (is_negative){
         result = 1/result;
     }
