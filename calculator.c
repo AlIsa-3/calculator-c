@@ -94,7 +94,7 @@ double calculation(struct input_variables inputs){
             result = exponentiation(inputs.first_number,inputs.second_number);
             break;
         default:
-            printf("Invalid Operation");
+            printf("Invalid Operation\n");
             result = 0;
     }
 
@@ -105,20 +105,21 @@ double calculation(struct input_variables inputs){
 void display_answer(double result,struct input_variables inputs){
     switch (inputs.operation){
         case '+':
-            printf("%lf + %lf = %lf",inputs.first_number,inputs.second_number,result);
+            printf("%lf + %lf = %lf\n",inputs.first_number,inputs.second_number,result);
             break;
         case '-':
-            printf("%lf - %lf = %lf",inputs.first_number,inputs.second_number,result);
+            printf("%lf - %lf = %lf\n",inputs.first_number,inputs.second_number,result);
             break;
         case '*':
-            printf("%lf x %lf = %lf",inputs.first_number,inputs.second_number,result);
+            printf("%lf x %lf = %lf\n",inputs.first_number,inputs.second_number,result);
             break;
         case '/':
-            printf("%lf / %lf = %lf", inputs.first_number, inputs.second_number, result);
+            printf("%lf / %lf = %lf\n", inputs.first_number, inputs.second_number, result);
             break;
         case '^': 
-            printf("%lf ^ %lf = %lf", inputs.first_number,inputs.second_number,result);
+            printf("%lf ^ %lf = %lf\n", inputs.first_number,inputs.second_number,result);
+            break;
         default:
-            printf("Invalid Operation");
+            printf("Invalid Operation\n");
     }
 }
